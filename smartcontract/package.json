@@ -1,0 +1,22 @@
+{
+  "name": "shares",
+  "version": "1.0.0",
+  "description": "shares",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0"
+  },
+  "dependencies": {
+    "web3": "github:ethereum/web3.js"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "messages": [
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 22
+      },
+      "qos": 0,
+      "timestamp": 1550085589664,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 23
+      },
+      "qos": 0,
+      "timestamp": 1550085590725,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 24
+      },
+      "qos": 0,
+      "timestamp": 1550085591814,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 25
+      },
+      "qos": 0,
+      "timestamp": 1550085592866,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 26
+      },
+      "qos": 0,
+      "timestamp": 1550085594330,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 27
+      },
+      "qos": 0,
+      "timestamp": 1550085595006,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 28
+      },
+      "qos": 0,
+      "timestamp": 1550085596077,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 29
+      },
+      "qos": 0,
+      "timestamp": 1550085597156,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 30
+      },
+      "qos": 0,
+      "timestamp": 1550085598221,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 31
+      },
+      "qos": 0,
+      "timestamp": 1550085599299,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 32
+      },
+      "qos": 0,
+      "timestamp": 1550085600354,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 33
+      },
+      "qos": 0,
+      "timestamp": 1550085601429,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 34
+      },
+      "qos": 0,
+      "timestamp": 1550085602502,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 35
+      },
+      "qos": 0,
+      "timestamp": 1550085603557,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 36
+      },
+      "qos": 0,
+      "timestamp": 1550085604649,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 37
+      },
+      "qos": 0,
+      "timestamp": 1550085605822,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 38
+      },
+      "qos": 0,
+      "timestamp": 1550085606888,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 39
+      },
+      "qos": 0,
+      "timestamp": 1550085608066,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 40
+      },
+      "qos": 0,
+      "timestamp": 1550085609083,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 41
+      },
+      "qos": 0,
+      "timestamp": 1550085610185,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 42
+      },
+      "qos": 0,
+      "timestamp": 1550085611316,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 43
+      },
+      "qos": 0,
+      "timestamp": 1550085612384,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 44
+      },
+      "qos": 0,
+      "timestamp": 1550085613512,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 45
+      },
+      "qos": 0,
+      "timestamp": 1550085614556,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 46
+      },
+      "qos": 0,
+      "timestamp": 1550085615634,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 47
+      },
+      "qos": 0,
+      "timestamp": 1550085616749,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 48
+      },
+      "qos": 0,
+      "timestamp": 1550085617814,
+      "topic": "sdk/test/Python"
+    },
+    {
+      "format": "json",
+      "payload": {
+        "message": "Hello World!",
+        "sequence": 49
+      },
+      "qos": 0,
+      "timestamp": 1550085618887,
+      "topic": "sdk/test/Python"
+    }
+  ],
+  "qos": 0,
+  "topicFilter": "sdk/test/Python"
+}
