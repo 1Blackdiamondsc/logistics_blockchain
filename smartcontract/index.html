@@ -27,57 +27,68 @@
       }
 
       var abi = [
-        {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "name": "addr",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "share",
-              "type": "uint256"
-            }
-          ],
-          "name": "Update",
-          "type": "event"
-        },
-        {
-          "constant": false,
-          "inputs": [
-            {
-              "name": "share",
-              "type": "uint256"
-            }
-          ],
-          "name": "updateShares",
-          "outputs": [],
-          "payable": false,
-          "stateMutability": "nonpayable",
-          "type": "function"
-        },
-        {
-          "constant": true,
-          "inputs": [
-            {
-              "name": "addr",
-              "type": "address"
-            }
-          ],
-          "name": "getShares",
-          "outputs": [
-            {
-              "name": "",
-              "type": "uint256"
-            }
-          ],
-          "payable": false,
-          "stateMutability": "view",
-          "type": "function"
-        }
-      ]
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "x",
+				"type": "uint256"
+			}
+		],
+		"name": "set",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "share",
+				"type": "uint256"
+			}
+		],
+		"name": "updateShares",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "getShares",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
 
       var SharesContract = web3.eth.contract(abi);
 
@@ -94,19 +105,101 @@
         $('#numShares').text(res.toString())
       })
 
-      function buy() {
 
-        instance.updateShares(1, { from: buyerAddress }, function (err, res) {
-          console.log('txn', 'https://rinkeby.etherscan.io/tx/' + res)
-        })
+
+      function setvalue() {
+
+        abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "x",
+				"type": "uint256"
+			}
+		],
+		"name": "set",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "share",
+				"type": "uint256"
+			}
+		],
+		"name": "updateShares",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "getShares",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+      try {
+
+      var contractaddress = '0x67e8ed416798c4826a3e0c45a5915587e2e59f2e';
+      var myAbi = web3.eth.contract(abi);
+      var myfunction = myAbi.at(contractaddress);
+
+      myfunction.set.sendTransaction(document.getElementById("xvalue").value, { from: web3.eth.accounts[0], gas: 4000000 }, function (error, result) {
+      if (!error) {console.log(result);} else {console.log(error);}
+      })
+      } catch (err) {
+      document.getElementById("xvalue").innerHTML = err;
       }
+      }
+
+
+
+
     </script>
     <p id="numShares"></p>
   <table>
-    <button onclick='buy()'>Update</button>
+    <button onclick='setvalue()'>Update</button>
     <br>
+    <td>
+<input id="xvalue" type="text" />
+<input id="Button1" type="button" onclick="setvalue()" value="Add to Blockchain" />
+</td>
     <div>
-    <a href="https://rinkeby.etherscan.io/address/0x264771B9C23CA3706Ac014db408E0A4F86C02AA8">view history</a>
+    <a href="https://rinkeby.etherscan.io/address/0x67e8ed416798c4826a3e0c45a5915587e2e59f2e">view history</a>
     </div>
     </table>
   </body>
