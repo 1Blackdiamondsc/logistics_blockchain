@@ -7,10 +7,6 @@
 <body>
 <script>
 window.onload = function () {
-// check to see if user has metamask addon installed on his browser. check to make sure web3 is defined
-if (typeof web3 === 'undefined') {
-document.getElementById('metamask').innerHTML = 'You need <a href="https://metamask.io/">MetaMask</a> browser plugin to run this example'
-}
 // call the getvalue function here
 getvalue();
 }
@@ -105,13 +101,10 @@ var contractaddress = '0x1dcf0343036eb90cd4a657989835766cf6f43238';
 //instantiate and connect to contract address via Abi
 var myAbi = web3.eth.contract(abi);
 var myfunction = myAbi.at(contractaddress);
+
 //call the set function of our SimpleStorage contract
 myfunction.set.sendTransaction(document.getElementById("xvalue").value, { from: web3.eth.accounts[0], gas: 4000000 }, function (error, result) {
-if (!error) {
-console.log(result);
-} else {
-console.log(error);
-}
+if (!error) {console.log(result);} else {console.log(error);}
 })
 } catch (err) {
 document.getElementById("xvalue").innerHTML = err;

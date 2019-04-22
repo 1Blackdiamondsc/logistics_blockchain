@@ -1,6 +1,8 @@
 pragma solidity >=0.4.21 <0.6.0;
 contract Shares {
   mapping (address => uint) shares;
+
+  uint  v_data;
  
   function updateShares(uint share) public {
 
@@ -10,5 +12,10 @@ contract Shares {
  
   function getShares(address addr) public view returns(uint) {
     return shares[addr];
+
+
+  function set(uint x) public {
+        v_data = x;
+    }
   }
 }
