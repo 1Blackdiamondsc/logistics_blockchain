@@ -17,5 +17,9 @@ contract Shares {
   function set(uint x) public {
         v_data = x;
     }
+
+  function get() public view returns (uint) {
+        return v_data;
+    }
   }
 }
