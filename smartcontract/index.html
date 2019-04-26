@@ -192,7 +192,7 @@ window.onload = function () {
 //function to retrieve the last inserted value on the blockchain
 function getvalue() {
 try {
-// contract Abi defines all the variables,constants and functions of the smart contract. replace with your own abi
+
 var abi = [
 	{
 		"constant": false,
@@ -266,7 +266,7 @@ myfunction.get.call(function (err, xname) {
 if (err) { console.log(err) }
 if (xname) {
 //display value on the webpage
-document.getElementById("xbalance").innerHTML = "last inserted value into the blockchain is : " + xname;
+document.getElementById("xbalance").innerHTML = "Last update: " + xname;
 }
 });
 }
@@ -277,17 +277,25 @@ document.getElementById("xbalance").innerHTML = err;
 
 
     </script>
+  <div>
+    <p>Total transactions: </p>
     <p id="numShares"></p>
+      </div>
   <table>
-    <button onclick='setvalue()'>Update</button>
-    <br>
-    <td>
+
+
+
+
 <input id="xvalue" type="text" />
 <input id="Button1" type="button" onclick="setvalue()" value="Add to Blockchain" />
 </td>
     <div>
     <a href="https://rinkeby.etherscan.io/address/0x67e8ed416798c4826a3e0c45a5915587e2e59f2e">view history</a>
     </div>
+
+        <td>
+<div id="xbalance"></div>
+</td>
     </table>
   </body>
 </html>
