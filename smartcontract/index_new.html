@@ -45,20 +45,6 @@
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "share",
-				"type": "uint256"
-			}
-		],
-		"name": "updateShares",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "get",
@@ -80,7 +66,7 @@
 				"type": "address"
 			}
 		],
-		"name": "getShares",
+		"name": "getCount",
 		"outputs": [
 			{
 				"name": "",
@@ -96,7 +82,7 @@
       var SharesContract = web3.eth.contract(abi);
 
 
-      var contractAddress = '0x67e8ed416798c4826a3e0c45a5915587e2e59f2e'
+      var contractAddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46'
       var instance = SharesContract.at(contractAddress);
 
 
@@ -128,20 +114,6 @@
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "share",
-				"type": "uint256"
-			}
-		],
-		"name": "updateShares",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "get",
@@ -163,7 +135,7 @@
 				"type": "address"
 			}
 		],
-		"name": "getShares",
+		"name": "getCount",
 		"outputs": [
 			{
 				"name": "",
@@ -177,7 +149,7 @@
 ]
       try {
 
-      var contractaddress = '0x67e8ed416798c4826a3e0c45a5915587e2e59f2e';
+      var contractaddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46';
       var myAbi = web3.eth.contract(abi);
       var myfunction = myAbi.at(contractaddress);
 
@@ -212,20 +184,6 @@ var abi = [
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "share",
-				"type": "uint256"
-			}
-		],
-		"name": "updateShares",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"constant": true,
 		"inputs": [],
 		"name": "get",
@@ -247,7 +205,7 @@ var abi = [
 				"type": "address"
 			}
 		],
-		"name": "getShares",
+		"name": "getCount",
 		"outputs": [
 			{
 				"name": "",
@@ -259,7 +217,7 @@ var abi = [
 		"type": "function"
 	}
 ]
-var contractaddress = '0x67e8ED416798c4826A3e0C45a5915587E2e59f2e';
+var contractaddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46';
 //instantiate and connect to contract address via Abi
 var myAbi = web3.eth.contract(abi);
 var myfunction = myAbi.at(contractaddress);
@@ -277,6 +235,18 @@ document.getElementById("xbalance").innerHTML = err;
 }
 }
 
+  function update() {
+        instance.updateCount(1, { from: buyerAddress }, function (err, res) {
+          console.log('txn', 'https://rinkeby.etherscan.io/tx/' + res)
+        })
+      }
+
+   function doAction()
+{
+ setvalue();
+ update();
+}
+
     </script>
 
   
@@ -288,10 +258,10 @@ document.getElementById("xbalance").innerHTML = err;
       </div>
   <table>
 <input id="xvalue" type="text" />
-<input id="Button1" type="button" onclick="setvalue()" value="Add to Blockchain" />
+<input id="Button1" type="button" onclick="doAction()" value="Add to Blockchain" />
 
     <div>
-    <a href="https://rinkeby.etherscan.io/address/0x67e8ed416798c4826a3e0c45a5915587e2e59f2e">view history</a>
+    <a href="https://rinkeby.etherscan.io/address/0x1f5189987940cfd625d9de778377d1dfe7941c46">view history</a>
     </div>
 
         <td>

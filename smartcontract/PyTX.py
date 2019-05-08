@@ -1,24 +1,17 @@
-<html>
-  <head>
-    <title>Shipment</title>
+#from gpiozero import MCP3008
+#import time
+#pot = MCP3008(7)
+import numpy as np
+pot=np.random.rand()
+import js2py
+threshold=25
 
 
-  </head>
 
-
-
-  <style>
-.content {
-  max-width: 500px;
-  margin: auto;
-}
-</style>
-
-  <body class="content">
-
-  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script>
+js = """
+    import Web3 from 'web3';
+    
+    const web3 = new Web3('ws://localhost:8546');
 
       if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
        var web3 = new Web3(window.web3.currentProvider);
@@ -94,23 +87,19 @@
 ]
 
       var SharesContract = web3.eth.contract(abi);
-
-
-      var contractAddress = '0x67e8ed416798c4826a3e0c45a5915587e2e59f2e'
+      var contractAddress = '0x264771b9c23ca3706ac014db408e0a4f86c02aa8';
       var instance = SharesContract.at(contractAddress);
-
-
-      var buyerAddress = '0x491179f035fdf219798d186f576abdf842c14ca6'
+      var buyerAddress = '0x491179f035fdf219798d186f576abdf842c14ca6';
 
 
 
-      instance.getCount(buyerAddress, function (err, res) {
-        $('#numTx').text(res.toString())
+      instance.getShares(buyerAddress, function (err, res) {
+        $('#numShares').text(res.toString())
       })
 
 
 
-      function setvalue() {
+      function setvalue() {5
 
         abi = [
 	{
@@ -190,113 +179,10 @@
       }
 
 window.onload = function () {
-      getvalue();
-}
-//function to retrieve the last inserted value on the blockchain
-function getvalue() {
-try {
-
-var abi = [
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "x",
-				"type": "uint256"
-			}
-		],
-		"name": "set",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "share",
-				"type": "uint256"
-			}
-		],
-		"name": "updateShares",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "get",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "addr",
-				"type": "address"
-			}
-		],
-		"name": "getShares",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
-var contractaddress = '0x67e8ED416798c4826A3e0C45a5915587E2e59f2e';
-//instantiate and connect to contract address via Abi
-var myAbi = web3.eth.contract(abi);
-var myfunction = myAbi.at(contractaddress);
-//call the get function of our SimpleStorage contract
-myfunction.get.call(function (err, xname) {
-if (err) { console.log(err) }
-if (xname) {
-//display value on the webpage
-document.getElementById("xbalance").innerHTML = "Last update: " + xname;
-}
-});
-}
-catch (err) {
-document.getElementById("xbalance").innerHTML = err;
-}
+      setvalue();
 }
 
-    </script>
+"""
+while(True):
+    if pot>threshold:(js2py.eval_js(js.replace("document.write", "return ")))
 
-  
-
-
-  <div>
-    <p>Total transactions: </p>
-    <p id="numTx"></p>
-      </div>
-  <table>
-<input id="xvalue" type="text" />
-<input id="Button1" type="button" onclick="setvalue()" value="Add to Blockchain" />
-
-    <div>
-    <a href="https://rinkeby.etherscan.io/address/0x67e8ed416798c4826a3e0c45a5915587e2e59f2e">view history</a>
-    </div>
-
-        <td>
-<div id="xbalance"></div>
-</td>
-    </table>
-  </body>
-</html>
