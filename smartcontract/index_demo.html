@@ -49,6 +49,20 @@
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "l",
+				"type": "uint256"
+			}
+		],
+		"name": "updateCount",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"constant": true,
 		"inputs": [],
 		"name": "get",
@@ -84,7 +98,7 @@
 ]
 
       var SharesContract = web3.eth.contract(abi);
-      var contractAddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46'
+      var contractAddress = '0xe3e4ead0fe32d9bf7a87904f42f14b97a0f15599'
       var instance = SharesContract.at(contractAddress);
       var buyerAddress = '0x491179f035fdf219798d186f576abdf842c14ca6'
       instance.getCount(buyerAddress, function (err, res) {
@@ -105,6 +119,20 @@
 			}
 		],
 		"name": "set",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "l",
+				"type": "uint256"
+			}
+		],
+		"name": "updateCount",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -146,7 +174,7 @@
 ]
       try {
 
-      var contractaddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46';
+      var contractaddress = '0xe3e4ead0fe32d9bf7a87904f42f14b97a0f15599';
       var myAbi = web3.eth.contract(abi);
       var myfunction = myAbi.at(contractaddress);
 
@@ -175,6 +203,20 @@ var abi = [
 			}
 		],
 		"name": "set",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "l",
+				"type": "uint256"
+			}
+		],
+		"name": "updateCount",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -214,7 +256,7 @@ var abi = [
 		"type": "function"
 	}
 ]
-var contractaddress = '0x1f5189987940cfd625d9de778377d1dfe7941c46';
+var contractaddress = '0xe3e4ead0fe32d9bf7a87904f42f14b97a0f15599';
 var myAbi = web3.eth.contract(abi);
 var myfunction = myAbi.at(contractaddress);
 
@@ -242,11 +284,12 @@ document.getElementById("xbalance").innerHTML = err;
 {
  setvalue();
  update();
+
 }
 
     </script>
 
-  
+
 
 
   <div>
@@ -258,7 +301,7 @@ document.getElementById("xbalance").innerHTML = err;
 <input id="Button1" type="button" onclick="doAction()" value="Add to Blockchain" />
 
     <div>
-    <a href="https://rinkeby.etherscan.io/address/0x1f5189987940cfd625d9de778377d1dfe7941c46">view history</a>
+    <a href="https://rinkeby.etherscan.io/address/0xe3e4ead0fe32d9bf7a87904f42f14b97a0f15599">view history</a>
     </div>
 
         <td>
